@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+ <main class="main py-5" >
+    <div class="container d-flex justify-content-center aligin-items-center flex-column">
+             <div class="d-flex justify-content-center aligin-items-center ">
+                <h1 class="mainTitel  py-2 text-center d-inline    ">
+                    Bookmarker
+                   </h1>
+             </div>
+            <div class="bookmark-body d-flex justify-content-center flex-column align-items-center py-4 mt-5 px-3 ">
+                <h2 class="bookmark-titel">
+            
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center py-4 ">
+                    <label for="bookmarkName" class="pb-2 fw-bold">
+                      <i class="fa-solid fa-book-bookmark pe-2"></i>
+                      Site Name</label>
+                    <input type="text" placeholder="Bookmark Name" class="form-control " id="bookmarkName">
+                  </div>
+                  <div class="site-url w-100 d-flex flex-column justify-content-center pb-4">
+                    <label for="bookmarkURL" class="pb-2 fw-bold">
+                      <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL">
+                  </div>
+                  <button class="btn btn-submit px-5 "  id="submitBtn">Submit</button>
+
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                  <tr><th class="text-capitalize">index</th>
+                  <th class="text-capitalize">Website Name</th>
+                  <th class="text-capitalize">Visit</th>
+                  <th class="text-capitalize">Delete</th>
+                </tr></thead>
+                <tbody id="tableContent">
+                    <tr>
+                      <!-- <td>1</td>
+                      <td>Googal</td>              
+                      <td>
+                        <button class="btn btn-visit" data-index="0">
+                          <i class="fa-solid fa-eye pe-2"></i>Visit
+                        </button>
+                      </td>
+                      <td>
+                        <button class="btn btn-delete pe-2" data-index="0">
+                          <i class="fa-solid fa-trash-can"></i>
+                          Delete
+                        </button>
+                      </td> -->
+                  </tr>
+                  </tbody>
+              </table>
+    </div>
+    <div id ="model"class="box-submit position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+        <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+          <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+            <div class="circle-submit d-flex">
+              <span class=" child1 rounded-circle me-2"></span>
+              <span class=" child2 rounded-circle me-2"></span>
+              <span class=" child3 rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i id ="closeElement" class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2 box-content-submit">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ul class="rules list-unstyled m-0">
+            <li >
+              <i class="fa-regular fa-circle-right p-2 text-danger "></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2 text-danger"></i>Site URL must be a
+              valid one
+            </li>
+          </ul>
+        </div>
+      </div>
+ </main>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
